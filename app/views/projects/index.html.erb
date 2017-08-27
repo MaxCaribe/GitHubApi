@@ -1,0 +1,5 @@
+<% if @result.success? %>
+    <% @result.data.each do |project| %>
+        <%= project %>
+    <% end %>
+<% end %>
