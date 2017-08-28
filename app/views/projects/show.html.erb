@@ -1,0 +1,9 @@
+<% if @project.success? %>
+    <div class="left side">
+      <%= @project.data['full_name'] %>
+
+    </div>
+    <div class="right side"><%= @project.data %></div>
+<% else %>
+    <%= @project.message %>
+<% end %>

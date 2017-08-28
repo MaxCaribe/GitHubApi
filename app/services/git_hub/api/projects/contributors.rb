@@ -1,7 +1,7 @@
 module GitHub
   module Api
     module Projects
-      class Get < GitHub::Api::Base
+      class Contributors < GitHub::Api::Base
         ADDRESS = '/repos'.freeze
 
         def initialize(owner, repo)
@@ -11,7 +11,7 @@ module GitHub
         private
 
         def get_uri(owner, repo)
-          url = "#{GitHub::Api::Settings::ADDRESS}#{ADDRESS}/#{owner}/#{repo}"
+          url = "#{GitHub::Api::Settings::ADDRESS}#{ADDRESS}/#{owner}/#{repo}/contributors"
           URI.parse(url)
         end
 

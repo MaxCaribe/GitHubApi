@@ -1,7 +1,7 @@
 module GitHub
   module Api
     module Projects
-      class Search < Base
+      class Search < GitHub::Api::Base
         ADDRESS = '/search/repositories'.freeze
 
         def initialize(search_for)
